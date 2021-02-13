@@ -1,0 +1,80 @@
+
+body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
+    overflow-x: hidden;
+}
+.header {
+    background-color: #063C5E;
+    padding: 10px;
+}
+.toplogo{
+    width: 300px;
+}
+.header li a {
+    color: #fff;
+  }
+footer {
+
+    color:white;
+    background-color: #063C5E;
+    border-top: 5px solid #FCCF14;
+    padding: 10px;
+}
+.bottomlogo {
+    width:150px;
+}
+footer li a {
+    color: #fff;
+  }
+.navlist {
+  list-style-type: none;
+  color:white;
+  margin: 0px;
+  padding: 0px;
+}
+span {
+    text-decoration: underline;
+    font-weight:bold;
+}
+.title {
+    color: #FCCF14;
+}
+.cardcover{
+    width:400px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border 5px solid white;
+  padding 0px
+  border radius: 40px
+}
+
+.topcard {
+
+    border: 5px solid #FCCF14;
+    padding: 20px 0px;
+    background-color: #063C5E;
+    margin: 40px 40px 0px 40px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.bottomcard {
+    border: 5px solid #FCCF14;
+    padding: 30px;
+    margin: 0px 40px 40px 40px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    
+
+
+
+
+
+
+
+ 
+
+
