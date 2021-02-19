@@ -5,11 +5,10 @@ body {
     margin: 0;
     overflow-x: hidden;
     font-size: 1.4rem;
-    /* background-image: linear-gradient( #006B6B,white,); */
     background-image: linear-gradient(rgba(0,177,177,.4), rgba(0,107,107,1));
 
-
 }
+/* Styles head nav bar */
 .header {
     background-color: #063C5E;
     padding: 10px;     
@@ -35,6 +34,7 @@ body {
     color: blue;
     background-color: #ffff00;
 }
+/* white container div  */
 .container {
     border: 5px solid #063C5E; 
     background-color: white; 
@@ -42,18 +42,17 @@ body {
     padding: 4%;
 
 }
-.about_headers{
+.container_headers{
     text-align: center;
+    color:#063C5E;
 }
-
+/* footer nav bar */
 footer {
-
     color:white;
     background-color: #063C5E;
     border-top: 5px solid #FCCF14;
-    padding: 15px;
-    
-    
+    padding: 15px; 
+    margin: auto; 
 }
 
 footer h3{
@@ -63,26 +62,29 @@ footer h3{
 .bottomlogo {
     width:150px;
     padding: 3px;
-   
 }    
-
-footer li a {
-    color: #fff;
-  }
 
 .footer_nav{
     display: inline-block;
     width: auto;
-    padding: 20px; 
-    
-}
-.navlist, .navlist a {
-  list-style-type: none;
-  color:white;
-  margin: 0px;
-  padding: 0px;
+    margin: 10px;
+    width: 100%
+    padding: 5px;  
 }
 
+.navlist, .navlist a {
+    list-style-type: none;
+    color:white;
+    margin: 0px;
+    padding: 0px;
+  }
+
+footer li a {
+    color: #fff;
+    text-decoration: none;
+    width: 100%; 
+  }
+  /* index page  */
 span {
     text-decoration: underline;
     font-weight:bold;
@@ -94,6 +96,13 @@ span {
     font-style: italic; 
     margin: 0px;
 }
+.index_covers button{
+    border-radius: 0px;
+    background-color:#FCCF14;
+    margin: 20px 0px;
+    padding: 5px 15px;
+}
+/* comic card */
 .title {  
     color: #FCCF14;
     text-align: center;
@@ -111,7 +120,6 @@ margin-left: auto;
 
 .topcard {
     box-sizing: border-box;
-    /* width: 600px; */
     width: 80%;
     border: 5px solid #FCCF14;
     padding: 20px 0px;
@@ -123,28 +131,24 @@ margin-left: auto;
 .bottomcard {
     box-sizing: border-box;
     width: 80%;
-    /* width: 600px; */
     border: 5px solid #FCCF14;
     border-top: 0px;
     padding: 30px;
     margin: 0px auto 30px auto;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    
+    background-color: white;  
 }
 /* Log_in form */
 .form_login{
     text-align: center;
 }   
-/* keep experimenting here */
-.xxx{
+.login_class{
     text-align: right;
     margin: 0 30%;
 }
 .form_login input{
     border-radius: 3px;
-
-
 }
 .form_login input[type=submit]{
     border-radius: 0px;
@@ -154,11 +158,66 @@ margin-left: auto;
 }
 #LOGIN {
     text-align: center;
-
+} 
+/* Admin table */
+#add_new_comic{
+    border-radius: 0px;
+    background-color:#FCCF14;
+    padding: 5px 10px;
+    color: #063C5E;
+    margin: 20px auto 40px;
+    display: block;
 }
-    
+.admin {
+    border-collapse: collapse;
+    width: 100%
+}
+.admin th{
+    text-align: center;
+    padding: 12px 8px;
+    border: 1px solid  #063C5E;  
+}
+.admin td {
+    padding: 8px;
+    border: 1px solid  #063C5E;
+ }
+.admin tr:nth-child(odd){
+    background-color:#C2C2C2
+}
+.admin input[type=button]{
+    border-radius: 0px;
+    background-color:#FCCF14;
+    padding: 5px 10px;
+    color: #063C5E;  
+}
+.admin input[value="EDIT"] { 
+    background-color: #063C5E;
+    color: white;
+    padding: 5px 22px;
+      }
+/* Style for update and create form */
+.create_update_form {
+    display: inline-block;
+    text-align: right;
+    padding: 0 200px 0 30px;  
+}
+.create_update_form input, .create_update_form textarea, #publisher{
+    width: 250px;
+}
+.create_update_form textarea{
+    height: 120px;
+}
+ .create_update_form input[type=submit]{
+        border-radius: 0px;
+        background-color:#FCCF14;
+        width: 90px;
+        margin: 30px 150px 0px;
+        padding: 5px 0px;
 }
 
+
+
+ 
 
 
 
