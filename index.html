@@ -3,6 +3,11 @@
 <head>
     <title>Codesquad Comics</title>
     <link rel="stylesheet" type="text/css" href="public/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cd65848fa7.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -25,6 +30,8 @@
 <div class="container">
 <h3 class="container_headers">COMPLETE COMIC COLLECTION</h3>
 <div class="index_covers">
+
+<div class="cover">
 <a href="#">
     <img src="public/images/fun-home.jpg" alt="Fun Home">
 </a>
@@ -32,7 +39,9 @@
 by Alison Bechdel<br>
 5 stars<br>
 <a href="#">Details</a><br>
+</div>
 
+<div class="cover">
 <a href="#">
 <img src="public/images/watchmen.jpg" alt="Watchmen">
 </a>
@@ -40,7 +49,9 @@ by Alison Bechdel<br>
 by Alan Moore<br>
 5 stars<br>
 <a href="#">Details</a><br>
+</div>
 
+<div class="cover">
 <a href="#">
 <img src="public/images/hunter-x-hunter.jpg" alt="Hunter X Hunter Volume 1">
 </a>
@@ -48,7 +59,9 @@ by Alan Moore<br>
 by Yoshihiro Togashi<br>
 5 stars<br>
 <a href="#">Details</a><br>
+</div>
 
+<div class="cover">
 <a href="#">
 <img src="public/images/lumberjanes.jpg" alt="Lumber Janes Volume 1">
 </a>
@@ -56,7 +69,9 @@ by Yoshihiro Togashi<br>
 by Noelle Stevenson<br>
 4 stars<br>
 <a href="#">Details</a><br>
+</div>
 
+<div class="cover">
 <a href="./one-piece.html">
 <img src="public/images/one-piece.jpg" alt="One Piece Volume 1: Romance Dawn">
 </a>
@@ -64,7 +79,9 @@ by Noelle Stevenson<br>
 by Eiichiro Oda<br>
 5 stars<br>
 <a href="./one-piece.html">Details</a><br>
+</div>
 
+<div class="cover">
 <a href="#">
 <img src="public/images/wake.jpg" alt="Wake: The Hidden History of Women-Led Slave Revolts">
 </a>
@@ -72,7 +89,9 @@ by Eiichiro Oda<br>
 by Rebecca Hall<br>
 4 stars<br>
 <a href="#">Details</a><br>
+</div>
 
+<div class="cover">
 <a href="#">
 <img src="public/images/black-panther.jpg" alt="Black Panther: A Nation Under Our Feet Book 1">
 </a>
@@ -80,7 +99,9 @@ by Rebecca Hall<br>
 by Ta-Nehisi Coates<br>
 3 stars<br>
 <a href="#">Details</a><br>
+</div>
 
+<div class="cover">
 <a href="#">
 <img src="public/images/the-walking-dead.jpg" alt="The Walking Dead Volume 1: Days Gone Bye">
 </a>
@@ -88,7 +109,9 @@ by Ta-Nehisi Coates<br>
 by Robert Kirkman<br>
 4 stars<br>
 <a href="#">Details</a><br>
+</div>
 
+<div class="cover">
 <a href="#">
 <img src="public/images/march.jpg" alt="March: Book One">
 </a>
@@ -96,7 +119,9 @@ by Robert Kirkman<br>
 by John Lewis<br>
 5 stars<br>
 <a href="#">Details</a><br>
+</div>
 
+<div class="cover">
 <a href="#">
 <img src="public/images/batman.jpg" alt="Batman: The Dark Knight Returns">
 </a>
@@ -104,7 +129,9 @@ by John Lewis<br>
 by Frank Miller<br>
 53stars<br>
 <a href="#">Details</a><br>
+</div>
 
+<div class="cover">
 <a href="#">
 <img src="public/images/queer.jpg" alt="Queer: A Graphic History">
 </a>
@@ -112,7 +139,9 @@ by Frank Miller<br>
 by Meg-John Barker<br>
 4 stars<br>
 <a href="#">Details</a><br>
+</div>
 
+<div class="cover">
 <a href="#">
 <img src="public/images/parable-of-the-sower.jpg" alt="Parable of the Sower">
 </a>
@@ -120,10 +149,14 @@ by Meg-John Barker<br>
 by Octavia Butler<br>
 4 stars<br>
 <a href="#">Details</a> <br>
+</div>
         
-<button type="button">DISPLAY MORE</button> 
-
  </div>
+
+ <div class="index_button_div">
+ <button type="button" id="index_button">DISPLAY MORE</button> 
+</div>
+
 </div>
 
 <footer> 
@@ -147,10 +180,10 @@ by Octavia Butler<br>
     
     <div class="footer_nav">
     <h3>FOLLOW US</h3>
-    <ul class="navlist">
-        <li><a href="#">Facebook</a></li> 
-        <li><a href="#">Instagram</a> </li>
-        <li><a href="#">Twitter</a> </li>
+    <ul class="navlist" id="icon-list">
+        <li><i class="fab fa-facebook"></i></li> 
+        <li><i class="fab fa-instagram"></i> </li>
+        <li><i class="fab fa-twitter"></i></li>
         </ul> 
     </div>
     
@@ -160,7 +193,7 @@ by Octavia Butler<br>
     <img src="public/images/CodeSquad-logo-b.png" alt="codesquad logo" class="bottomlogo">
     </a>
     </div>
-
+</footer>
 </body>
 </html>
 

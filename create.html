@@ -3,6 +3,11 @@
 <head>
     <title>Create New Comic</title>
     <link rel="stylesheet" type="text/css" href="public/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cd65848fa7.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -20,13 +25,15 @@
   <div class="container">
   <h2 class="container_headers">CREATE NEW COMIC</h2>
   <form class="create_update_form" action="#">
-  
+        <div>
         <label for="title">Title:</label>
-        <input type="text" id="title" name="title" placeholder="Title"><br>
-        <br>
+        <input type="text" id="title" name="title" placeholder="Title">
+        </div>
+        <div>
         <label for="author">Author:</label>
-        <input type="text" id="author" name="author" placeholder="Author"><br><br>
-    
+        <input type="text" id="author" name="author" placeholder="Author">
+        </div>
+        <div>
         <label for="publisher">Publisher:</label>
         <select id="publisher" name="publisher">
             <option value="select" selected disabled>Select</option>
@@ -40,20 +47,23 @@
             <option value="top_shelf_productions">Top Shelf Productions</option>
             <option value="viz_media_llc">VIZ Media LLC</option>
          </select>
-         <br><br>
-
+        </div>
+        <div>
         <label for="genre">Genre:</label>
         <input type="text" id="genre" name="genre" placeholder="Genre">
-        <br><br>
+        </div>
+        <div>
         <label for="numpages">Number of Pages:</label>
         <input type="number" id="numpages" name="numpages" placeholder="Number of Pages">
-        <br><br>
+        </div>
+        <div>
         <label for="rating">Rating:</label>
         <input type="text" id="rating" name="rating">
-        <br><br>
+        </div>
+        <div>
         <label for="synopsis">Synopsis:</label>
         <textarea id= synopsis name="synopsis" placeholder=Synopsis>Synopsis</textarea>
-        <br><br>
+        </div>
 
         <input type="submit" value="Submit"><br>
   
@@ -81,10 +91,10 @@
     
     <div class="footer_nav">
     <h3>FOLLOW US</h3>
-    <ul class="navlist">
-        <li><a href="#">Facebook</a></li> 
-        <li><a href="#">Instagram</a> </li>
-        <li><a href="#">Twitter</a> </li>
+    <ul class="navlist" id="icon-list">
+        <li><i class="fab fa-facebook"></i></li> 
+        <li><i class="fab fa-instagram"></i> </li>
+        <li><i class="fab fa-twitter"></i></li>
         </ul> 
     </div>
     
