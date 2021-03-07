@@ -99,13 +99,12 @@ footer h3{
 footer{
     display:flex;
     justify-content: space-around;
-    flex-wrap: wrap;
 }
 .footer_nav{
     width: auto;
     margin: 10px;
-    width: 100%
-    padding: 5px;  
+    width: 100%;
+    padding: 5px;
 }
 
 .navlist, .navlist a {
@@ -119,7 +118,7 @@ footer li a {
     text-decoration: none;
     width: 100%; 
   }
-footer i 
+footer i
 {
     color:var(--white);
     padding: 0 12px;
@@ -127,6 +126,12 @@ footer i
 #icon-list li{
     display: inline;
 }
+/* menu icon  */
+.fa {
+    display:none;
+    
+}
+
   /* index page  */
 span {
     text-decoration: underline;
@@ -342,11 +347,12 @@ span {
     flex-shrink: 0;
     flex-grow: 2;
     margin-bottom: 23px;
-   
+
 }
 .create_update_form textarea{
     height: 120px;
 }
+
 .create_update_form label{
     width: 100px;
     margin-right: 20px;
@@ -362,7 +368,82 @@ span {
         padding: 5px 0px;
 }
 
+/* Mobile and tablet screen size */
+@media screen and (min-width: 320px) and (max-width: 768px){
+    body{
+        font-size: 1rem;
+    }
+    
+    .fa {
+        color:var(--white);
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0.5rem 1.5rem;
+        font-size: 2em;
+    }
+    nav{
+        display:none;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .admin{
+        margin-left: 40%;
+    }
+    #table-container{
+        display: block;
+        width: 200px;
+        overflow-x:auto;  
+    }
+}
+/* desktop */
+@media screen and (min-width: 1024px){
+    footer{
+        display: flex;
+    
+    }
+    .fa {
+        display: none;
+    }
+    .card{
+        display:flex;
+        flex-direction: row;
+    }
+    .topcard img{
+        box-sizing: border-box;
+        max-height: 35vw;
+        width: auto; 
+    }
 
+    .topcard{
+        border-right: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 30px;
+        height: 50vw;
+        width: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        flex: 1;
+    }
+    .bottomcard{
+        border-left: none;
+        border-radius: 30px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        height: 50vw;
+        width: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        flex: 1.2;
+        font-size: 1.3rem;
+        overflow: auto;
+    }
+
+}
 
 
 
