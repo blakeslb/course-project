@@ -21,11 +21,21 @@ i {
     color: var(--blue);
 }
 /* Styles head nav bar */
+
+/* By defauly, nav menu is hidden */
+#navbar{
+    display:none;
+}
+
+nav#navbar.open {
+    display: block; 
+}
+
 .header {
     font-family: 'Fredericka the Great', cursive;
     background-color:var(--teal);
     padding: 10px;   
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap; 
     justify-content: space-between;
     
@@ -37,14 +47,15 @@ i {
 }
 
 .header ul {
- display: flex;
- 
+ /* display: flex; */
 }
 
 .header li a{
   
     padding: 30px 20px 30px 20px;
     text-decoration: none;
+    /* display: block;  */
+    
 }
 .header li a:hover{
     color: var(--yellow);
@@ -126,11 +137,18 @@ footer i
 #icon-list li{
     display: inline;
 }
-/* menu icon  */
+
 .fa {
-    display:none;
+        color:var(--white);
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 1.5rem 1.5rem;
+        font-size: 2.8em;
+    }
     
-}
+} 
 
   /* index page  */
 span {
@@ -368,27 +386,28 @@ span {
         padding: 5px 0px;
 }
 
-/* Mobile and tablet screen size */
+/* Mobile to tablet screen size */
 @media screen and (min-width: 320px) and (max-width: 768px){
     body{
         font-size: 1rem;
     }
-    
-    .fa {
-        color:var(--white);
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding: 0.5rem 1.5rem;
-        font-size: 2em;
+
+    /* Styles hamburger navigation menu for mobile size */
+    nav li a {
+        font-size: 1.2rem; 
     }
-    nav{
-        display:none;
+    nav li {
+        text-align: center; 
     }
+    .header li {
+        padding: 10px;
+    }
+    /* -------- */
+
     footer{
         display: flex;
         flex-direction: column;
+        
     }
     .admin{
         margin-left: 40%;
@@ -399,15 +418,51 @@ span {
         overflow-x:auto;  
     }
 }
+/* tablet screen size */
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    /* styles navigation menu  */
+    #navbar {
+        display: block; 
+    }
+    #hamburger-menu-icon {
+        display: none;
+    }
+    .header {
+        display: flex;
+       }
+    .header ul {
+        display: flex;
+       }
+    
+
+}
+
 /* desktop */
 @media screen and (min-width: 1024px){
+        /* styles navigation menu  */
+
+    #navbar {
+        display: block; 
+    }
+
+    .header {
+        display: flex;
+       }
+    .header ul {
+        display: flex;
+       }
+
+    #hamburger-menu-icon{
+        display: none;
+    }
+
+    /* -------- */
     footer{
         display: flex;
     
     }
-    .fa {
-        display: none;
-    }
+  
     .card{
         display:flex;
         flex-direction: row;

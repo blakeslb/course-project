@@ -1,110 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Create New Comic</title>
     <link rel="stylesheet" type="text/css" href="public/styles/styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/cd65848fa7.js" crossorigin="anonymous"></script>
+    <script src="scripts.js" defer></script>
+
 
 </head>
+
 <body>
     <div class="header">
-    <img src="public/images/codesquad-comics-logo.png" alt="Codesquad comics logo" class="toplogo">
-    <nav>
-       <ul>
-        <li class="navlist"><a href="index.html">HOME</a></li> 
-        <li class="navlist"><a href="about.html">ABOUT</a> </li>
-        <li class="navlist"><a href="login.html">LOGIN</a> </li>
-        </ul> 
-      </nav>
-      <i class="fa fa-bars"></i>
-    </div>
-
-  <div class="container">
-  <h2 class="container_headers">CREATE NEW COMIC</h2>
-  <form class="create_update_form" action="#">
-        <div>
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title" placeholder="Title">
-        </div>
-        <div>
-        <label for="author">Author:</label>
-        <input type="text" id="author" name="author" placeholder="Author">
-        </div>
-        <div>
-        <label for="publisher">Publisher:</label>
-        <select id="publisher" name="publisher">
-            <option value="select" selected disabled>Select</option>
-            <option value="boom!box">BOOM! Box</option>
-            <option value="dc_comics">DC Comics</option>
-            <option value="harry_n_abrams">Harry N. Abrams</option>
-            <option value="icon_books">Icon Books</option>
-            <option value="image_comics">Image Comics</option>
-            <option value="marvel">Marvel</option>
-            <option value="simon_schuster">Simon &amp; Schuster</option>
-            <option value="top_shelf_productions">Top Shelf Productions</option>
-            <option value="viz_media_llc">VIZ Media LLC</option>
-         </select>
-        </div>
-        <div>
-        <label for="genre">Genre:</label>
-        <input type="text" id="genre" name="genre" placeholder="Genre">
-        </div>
-        <div>
-        <label for="numpages">Number of Pages:</label>
-        <input type="number" id="numpages" name="numpages" placeholder="Number of Pages">
-        </div>
-        <div>
-        <label for="rating">Rating:</label>
-        <input type="text" id="rating" name="rating">
-        </div>
-        <div>
-        <label for="synopsis">Synopsis:</label>
-        <textarea id= synopsis name="synopsis" placeholder=Synopsis>Synopsis</textarea>
+        <img src="public/images/codesquad-comics-logo.png" alt="Codesquad comics logo" class="toplogo">
+        <nav id="navbar">
+            <ul>
+                <li class="navlist"><a href="index.html">HOME</a></li>
+                <li class="navlist"><a href="about.html">ABOUT</a> </li>
+                <li class="navlist"><a href="login.html">LOGIN</a> </li>
+            </ul>
+        </nav>
+        <div id="hamburger-wrap">
+            <i class="fa fa-bars" id="hamburger-menu-icon"></i>
         </div>
 
-        <input type="submit" value="Submit"><br>
-  
-  </form> 
-</div>
-  
-<footer> 
-    <div class="footer_nav">
-    <h3>VISIT US</h3>
-    <ul class="navlist">
-        <li>CodeSquad Comics</li>
-        <li>123 Dorchester Ave</li>
-        <li>Boston, MA 02124</li>
-</ul>
-    </div>
-    
-    <div class="footer_nav"> 
-    <h3>LINKS</h3>
-    <ul class="navlist">
-        <li><a href="index.html">Home</a></li> 
-        <li><a href="about.html">About</a> </li>
-        <li><a href="login.html">Login</a> </li>
-    </ul> 
-    </div>
-    
-    <div class="footer_nav">
-    <h3>FOLLOW US</h3>
-    <ul class="navlist" id="icon-list">
-        <li><i class="fab fa-facebook"></i></li> 
-        <li><i class="fab fa-instagram"></i> </li>
-        <li><i class="fab fa-twitter"></i></li>
-        </ul> 
-    </div>
-    
-    <div class="footer_nav">
-    <h3>A PRODUCT OF</h3>
-    <a href="http://codesquad.org/" target="_blank" rel="noopener noreferrer">
-    <img src="public/images/CodeSquad-logo-b.png" alt="codesquad logo" class="bottomlogo">
-    </a>
     </div>
 
-</footer>
+    <div class="container">
+        <h2 class="container_headers">CREATE NEW COMIC</h2>
+        <form class="create_update_form" action="#">
+            <div>
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" placeholder="Title">
+            </div>
+            <div>
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" placeholder="Author">
+            </div>
+            <div>
+                <label for="publisher">Publisher:</label>
+                <select id="publisher" name="publisher">
+                    <option value="select" selected disabled>Select</option>
+                    <option value="boom!box">BOOM! Box</option>
+                    <option value="dc_comics">DC Comics</option>
+                    <option value="harry_n_abrams">Harry N. Abrams</option>
+                    <option value="icon_books">Icon Books</option>
+                    <option value="image_comics">Image Comics</option>
+                    <option value="marvel">Marvel</option>
+                    <option value="simon_schuster">Simon &amp; Schuster</option>
+                    <option value="top_shelf_productions">Top Shelf Productions</option>
+                    <option value="viz_media_llc">VIZ Media LLC</option>
+                </select>
+            </div>
+            <div>
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre" name="genre" placeholder="Genre">
+            </div>
+            <div>
+                <label for="numpages">Number of Pages:</label>
+                <input type="number" id="numpages" name="numpages" placeholder="Number of Pages">
+            </div>
+            <div>
+                <label for="rating">Rating:</label>
+                <input type="text" id="rating" name="rating">
+            </div>
+            <div>
+                <label for="synopsis">Synopsis:</label>
+                <textarea id=synopsis name="synopsis" placeholder=Synopsis>Synopsis</textarea>
+            </div>
+
+            <input type="submit" value="Submit"><br>
+
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer_nav">
+            <h3>VISIT US</h3>
+            <ul class="navlist">
+                <li>CodeSquad Comics</li>
+                <li>123 Dorchester Ave</li>
+                <li>Boston, MA 02124</li>
+            </ul>
+        </div>
+
+        <div class="footer_nav">
+            <h3>LINKS</h3>
+            <ul class="navlist">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a> </li>
+                <li><a href="login.html">Login</a> </li>
+            </ul>
+        </div>
+
+        <div class="footer_nav">
+            <h3>FOLLOW US</h3>
+            <ul class="navlist" id="icon-list">
+                <li><i class="fab fa-facebook"></i></li>
+                <li><i class="fab fa-instagram"></i> </li>
+                <li><i class="fab fa-twitter"></i></li>
+            </ul>
+        </div>
+
+        <div class="footer_nav">
+            <h3>A PRODUCT OF</h3>
+            <a href="http://codesquad.org/" target="_blank" rel="noopener noreferrer">
+                <img src="public/images/CodeSquad-logo-b.png" alt="codesquad logo" class="bottomlogo">
+            </a>
+        </div>
+
+    </footer>
 </body>
