@@ -1,32 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <title>Update Comic</title>
-    <link rel="stylesheet" type="text/css" href="public/styles/styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/cd65848fa7.js" crossorigin="anonymous"></script>
-    <script src="scripts.js" defer></script>
+<%- include('../partials/head') -%>
 
-
-</head>
-
-<body>
-    <div class="header">
-        <img src="public/images/codesquad-comics-logo.png" alt="Codesquad comics logo" class="toplogo">
-        <nav id="navbar">
-            <ul>
-                <li class="navlist"><a href="index.html">HOME</a></li>
-                <li class="navlist"><a href="about.html">ABOUT</a> </li>
-                <li class="navlist"><a href="login.html">LOGIN</a> </li>
-            </ul>
-        </nav>
-        <div id="hamburger-wrap">
-            <i class="fa fa-bars" id="hamburger-menu-icon"></i>
-        </div>
-
-    </div>
+<%- include('../partials/nav') -%>
 
     <div class="container">
         <h2 class="container_headers">UPDATE COMIC</h2>
@@ -76,41 +51,4 @@
             <input type="submit" value="Submit"><br>
         </form>
     </div>
-    <footer>
-        <div class="footer_nav">
-            <h3>VISIT US</h3>
-            <ul class="navlist">
-                <li>CodeSquad Comics</li>
-                <li>123 Dorchester Ave</li>
-                <li>Boston, MA 02124</li>
-            </ul>
-        </div>
-
-        <div class="footer_nav">
-            <h3>LINKS</h3>
-            <ul class="navlist">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a> </li>
-                <li><a href="login.html">Login</a> </li>
-            </ul>
-        </div>
-
-        <div class="footer_nav">
-            <h3>FOLLOW US</h3>
-            <ul class="navlist" id="icon-list">
-                <li><i class="fab fa-facebook"></i></li>
-                <li><i class="fab fa-instagram"></i> </li>
-                <li><i class="fab fa-twitter"></i></li>
-            </ul>
-        </div>
-
-        <div class="footer_nav">
-            <h3>A PRODUCT OF</h3>
-            <a href="http://codesquad.org/" target="_blank" rel="noopener noreferrer">
-                <img src="public/images/CodeSquad-logo-b.png" alt="codesquad logo" class="bottomlogo">
-            </a>
-        </div>
-
-    </footer>
-
-</body>
+    <%- include('../partials/footer') -%>
