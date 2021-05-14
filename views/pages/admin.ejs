@@ -1,0 +1,37 @@
+
+<%- include('../partials/head') -%>
+
+<%- include('../partials/nav') -%>
+
+    <div class="container">
+        <h2 class="container_headers">ADMIN PAGE</h2>
+        <button><a href = "/admin/create-book">Add new comic</a> </button>
+    </form>
+
+
+
+
+
+
+
+
+        <div id=table-container>
+            <table class="admin">
+                <tr>
+                    <th>COMIC TITLE</th>
+                    <th>EDIT</th>
+                    <th>DELETE</th>
+                </tr>
+             
+
+       <% data.forEach(book => { %>
+              <%- include('../partials/booklisting', {book: book}) -%>
+              <% }); %>
+                
+              
+         
+
+            </table>
+        </div>
+    </div>
+    <%- include('../partials/footer') -%>

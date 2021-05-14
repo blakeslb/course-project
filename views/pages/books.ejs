@@ -1,0 +1,27 @@
+
+<%- include('../partials/head') -%>
+
+<%- include('../partials/nav') -%>
+
+    <div class="card">
+
+        <div class="topcard">
+            <h2 class="title">One Piece Vol. 1: Romance Dawn</h2>
+            <img src= '/images/<%= book.image %>' alt='<%=book.title%>'>       
+         </div>
+
+        <div class="bottomcard">
+            <div><span>Title:</span> <%= book.title %></div>
+
+            <div><span>Author:</span> <%= book.author %></div>
+            <div><span>Publisher:</span><%= book.publisher %></div>
+
+            <div><span>Genre:</span> <%= book.genre %></div>
+            <div><span>Number of pages:</span> <%= book.pages %> </div>
+            <div><span>Rating:</span><%= book.rating %></div>
+            <div><span>Synopsis:</span> <%= book.synopsis %>  
+            </div>
+        </div>
+
+    </div>
+    <%- include('../partials/footer') -%>
