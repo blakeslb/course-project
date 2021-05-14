@@ -148,7 +148,7 @@ footer i
         font-size: 2.8em;
     }
     
-} 
+
 
   /* index page  */
 span {
@@ -169,6 +169,12 @@ span {
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
+    margin: 30px; 
+}
+
+.cover p{
+    padding: 0px;
+    margin: 0px; 
 }
 .cover a{
     text-decoration: none;
@@ -194,9 +200,8 @@ span {
 #index_button{
     border-radius: 0px;
     background-color:var(--yellow);
-    margin: 20px 0px;
+    margin: 20px auto; 
     padding: 5px 15px;
-    display: flex;
 }
 .index_button_div{
     display:flex;

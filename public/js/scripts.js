@@ -45,7 +45,7 @@ const comicBooks = [
 
         href: "./fun-home.html",
 
-        imgSrc: "public/images/fun-home.jpg",
+        imgSrc: "/images/fun-home.jpg",
 
         imgAlt: "Fun Home: A Family Tragicomic comic book cover",
 
@@ -61,7 +61,7 @@ const comicBooks = [
 
         href: "./hunter-x-hunter.html",
 
-        imgSrc: "public/images/hunter-x-hunter.jpg",
+        imgSrc: "/images/hunter-x-hunter.jpg",
 
         imgAlt: "Hunter X Hunter comic book cover",
 
@@ -77,7 +77,7 @@ const comicBooks = [
 
         href: "./the-walking-dead.html",
 
-        imgSrc: "./public/images/the-walking-dead.jpg",
+        imgSrc: "/images/the-walking-dead.jpg",
 
         imgAlt: "The Walking Dead, Vol. 1: Days Gone Bye comic book cover",
 

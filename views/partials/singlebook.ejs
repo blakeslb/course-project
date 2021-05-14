@@ -1,0 +1,15 @@
+
+    
+        <div class="cover">
+            <a href="./books/<%= book._id %>">
+                <img src= '/images/<%=book.image%>' alt='<%=book.title%>'>
+            </a>
+        <h3><%= book.title %></h3>
+        <p>by <%= book.author %></p>
+        <p>Rating: <%= book.rating %></p>
+        <p>Copies Sold: <%= book.numSold %></p>
+        <a href="./books/<%= book._id %>">Details</a>
+   
+</div>
+
+

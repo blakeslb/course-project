@@ -5,7 +5,12 @@
 
     <div class="container">
         <h2 class="container_headers">CREATE NEW COMIC</h2>
-        <form class="create_update_form" action="#">
+        <form class="create_update_form" action='/books/' method= 'POST'>
+            
+            <div>
+                <label for="image">Image:</label>
+                <input type="text" id="image" name="image" value="image value stored in database">
+            </div>
             <div>
                 <label for="title">Title:</label>
                 <input type="text" id="title" name="title" placeholder="Title">

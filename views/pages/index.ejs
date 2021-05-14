@@ -19,144 +19,15 @@
         <h3 class="container_headers">COMPLETE COMIC COLLECTION</h3>
         <div class="index_covers">
 
-            <div class="cover">
-                <a href="#">
-                    <img src="/images/fun-home.jpg" alt="Fun Home">
-                </a>
-                <br>
-                <p class="index_title">Fun Home: A Family Tragicomic</p>
-                by Alison Bechdel<br>
-                5 stars<br>
-                <a href="#">Details</a><br>
-            </div>
+            <% data.forEach(book => { %>
+<%- include('../partials/singlebook', {book: book}) -%>
+        <% }); %>
 
-            <div class="cover">
-                <a href="#">
-                    <img src="/images/watchmen.jpg" alt="Watchmen">
-                </a>
-                <br>
-                <p class="index_title">Watchmen</p>
-                by Alan Moore<br>
-                5 stars<br>
-                <a href="#">Details</a><br>
-            </div>
-
-            <div class="cover">
-                <a href="#">
-                    <img src="/images/hunter-x-hunter.jpg" alt="Hunter X Hunter Volume 1">
-                </a>
-                <br>
-                <p class="index_title">Hunter X Hunter Vol.1</p>
-                by Yoshihiro Togashi<br>
-                5 stars<br>
-                <a href="#">Details</a><br>
-            </div>
-
-            <div class="cover">
-                <a href="#">
-                    <img src="/images/lumberjanes.jpg" alt="Lumber Janes Volume 1">
-                </a>
-                <br>
-                <p class="index_title">Lumberjanes Vol. 1</p>
-                by Noelle Stevenson<br>
-                4 stars<br>
-                <a href="#">Details</a><br>
-            </div>
-
-            <div class="cover">
-                <a href="./one-piece.html">
-                    <img src="/images/one-piece.jpg" alt="One Piece Volume 1: Romance Dawn">
-                </a>
-                <br>
-                <p class="index_title">One Piece, Vol. 1: Romance Dawn</p>
-                by Eiichiro Oda<br>
-                5 stars<br>
-                <a href="./one-piece.html">Details</a><br>
-            </div>
-
-            <div class="cover">
-                <a href="#">
-                    <img src="/images/wake.jpg" alt="Wake: The Hidden History of Women-Led Slave Revolts">
-                </a>
-                <br>
-                <p class="index_title">Wake: The Hidden History of Women-Led Slave Revolts</p>
-                by Rebecca Hall<br>
-                4 stars<br>
-                <a href="#">Details</a><br>
-            </div>
-
-            <div class="cover">
-                <a href="#">
-                    <img src="/images/black-panther.jpg" alt="Black Panther: A Nation Under Our Feet Book 1">
-                </a>
-                <br>
-                <p class="index_title">Black Panther: A Nation Under Our Feet Book 1</p>
-                by Ta-Nehisi Coates<br>
-                3 stars<br>
-                <a href="#">Details</a><br>
-            </div>
-
-            <div class="cover">
-                <a href="#">
-                    <img src="/images/the-walking-dead.jpg" alt="The Walking Dead Volume 1: Days Gone Bye">
-                </a>
-                <br>
-                <p class="index_title">The Walking Dead, Vol. 1:Days Gone Bye</p>
-                by Robert Kirkman<br>
-                4 stars<br>
-                <a href="#">Details</a><br>
-            </div>
-
-            <div class="cover">
-                <a href="#">
-                    <img src="/images/march.jpg" alt="March: Book One">
-                </a>
-                <br>
-                <p class="index_title">March: Book One</p>
-                by John Lewis<br>
-                5 stars<br>
-                <a href="#">Details</a><br>
-            </div>
-
-            <div class="cover">
-                <a href="#">
-                    <img src="/images/batman.jpg" alt="Batman: The Dark Knight Returns">
-                </a>
-                <br>
-                <p class="index_title">Batman: The Dark Knight Returns</p>
-                by Frank Miller<br>
-                53stars<br>
-                <a href="#">Details</a><br>
-            </div>
-
-            <div class="cover">
-                <a href="#">
-                    <img src="/images/queer.jpg" alt="Queer: A Graphic History">
-                </a>
-                <br>
-                <p class="index_title">Queer: A Graphic History</p>
-                by Meg-John Barker<br>
-                4 stars<br>
-                <a href="#">Details</a><br>
-            </div>
-
-            <div class="cover">
-                <a href="#">
-                    <img src="/images/parable-of-the-sower.jpg" alt="Parable of the Sower">
-                </a>
-                <br>
-                <p class="index_title">Parable of the Sower</p>
-                by Octavia Butler<br>
-                4 stars<br>
-                <a href="#">Details</a> <br>
-            </div>
-
-        </div>
-
-        <div class="index_button_div">
-            <button type="button" id="index_button">DISPLAY MORE</button>
-        </div>
+        
 
     </div>
 
+    <div class="index_button_div">
+        <button type="button" id="index_button">DISPLAY MORE</button>
+    </div>
     <%- include('../partials/footer') -%>
