@@ -1,69 +1,98 @@
 //store all handlers for book related routes (which are cb functions)
 //Bring in data
 const { response } = require('express');
-const data = require('../data');
-const { v4:uuid } = require('uuid');
+const Comic = require("../models/comic-model");
 
 module.exports = {
     // id: (request, response) => {
     //     response.render('pages/books/_id')
  
     // }
-    id: (request, response) => {
-        const { id } = request.params;
-        const foundBook = data.find(book => book._id === String(id));
-        response.render(`./pages/books`, {book: foundBook});
+    id: (request, response) =>  {
+        const bookId = request.params.id;
+        Comic.findOne({_id: bookId}, (error, foundBook) => {
+            if(error) {
+                return error;
+            }else {
+                response.render('pages/books', { book: foundBook });
+            }
+        })
     },
+
     post_books: (request, response) => {
-        const {_id = uuid(), title, author, publisher, pages, rating, synopsis, image} = request.body;
-        data.push({_id, title, author, publisher, pages, rating, synopsis, image });
-        response.redirect('/admin/')
+    const {title, author, publisher, pages, genre, rating, synopsis, image} = request.body;
+    const newBook = new Comic({
+
+        title: title,
+        author: author,
+        publisher: publisher,
+        pages: pages,
+        genre: genre,
+        rating: rating,
+        synopsis: synopsis,
+        image: image,
+    })
+
+    newBook.save();
+    response.redirect("/admin/");  
     },
-
-
-
-
-
 
     
     delete: (request, response) => {
-        const { id } = request.params; 
-        const foundBook = data.find(book => book._id === String(id));
-        const index = data.indexOf(foundBook);
-        data.splice(index, 1);
-        response.redirect('/admin/')
-    },
+		const { id } = request.params;
+		Comic.deleteOne({_id: id}, (error) => {
+			if(error) {
+				return error; 
+			}else{
+				response.redirect('/admin/')
+			}
+			
+		})
+	},
+
     update: (request, response) => {
-        const { id } = request.params;
-        const {title, author, publisher, pages, rating, synopsis, image } = request.body;
-        // const updatedTitle = title;
-        // const updatedAuthor = author; 
-        // const updatedPublisher = publisher; 
-        // const updatedPages = pages; 
-        // const updatedRating= rating;
-        // const updatedSynopsis = synopsis; 
-        // const updatedImage = image;
+		const { id } = request.params;
 
-        const foundBook = data.find(book => book._id === id);
+		Comic.findByIdAndUpdate(id, {$set: {
+		    title: request.body.title,
+            author: request.body.author,
+            publisher: request.body.publisher,
+            pages: request.body.pages,
+            rating: request.body.rating,
+            synopsis: request.body.synopsis,
+            image: request.body.image,
+		}}, {new: true}, error => {
+			if(error) {
+				return error; 
+			}else {
+				response.redirect('/admin')
+			}
+		})
+		
+	}
 
-        // foundBook.title = updatedTitle;
-        // foundBook.author = updatedAuthor;
-        // foundBook.publisher= updatedPublisher;
-        // foundBook.rating = updatedRating;
-        // foundBook.synopsis = updatedSynopsis;
-        // foundBook.image = updatedImage;
-        // foundBook.pages = updatedPages;
-        
-        foundBook.title = title;
-        foundBook.author = author;
-        foundBook.publisher= publisher; 
-        foundBook.rating = rating; 
-        foundBook.synopsis = synopsis; 
-        foundBook.image = image; 
-        foundBook.pages = pages; 
+    
+    // update: (request, response) => {
+    //     const {title, author, publisher, pages, rating, synopsis, image } = request.body;
+	// 	const { id } = request.body;
 
-        response.redirect('/admin')
-    },
+	// 	Comic.findByIdAndUpdate({_id: id}, {$set: {
+	// 	    title: title,
+    //         author: author,
+    //         publisher: publisher,
+    //         pages: pages,
+    //         rating: rating,
+    //         synopsis: synopsis,
+    //         image: image
+	// 	}}, {new: true}, (error) => {
+	// 		if (error) {
+	// 			return error; 
+	// 		}else {
+	// 			response.redirect('/admin/')
+	// 		}
+	// 	})
+		
+	// }
 
   }
 

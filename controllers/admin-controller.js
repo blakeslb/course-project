@@ -1,19 +1,29 @@
 //store all handlers for book related routes (which are cb functions)
 //Bring in data
-const data = require('../data');
+const Comic = require("../models/comic-model");
 
 module.exports = {
     admin: (request, response) => {
-        response.render('pages/admin', { data: data});
+        Comic.find({}, (error, allComics) => {
+            if (error) {
+                return error;
+            } else {
+                response.render('pages/admin', { data: allComics });
+            }
+        });
     },
+
     create: (request, response) => {
         response.render('pages/create');
     },
     update: (request, response) => {
         const { id } = request.params;
-        const foundBook = data.find(book => book._id === String(id));
-        response.render('pages/update', { book: foundBook });
-
-       
+        Comic.findOne({ _id: id }, (error, foundBook) => {
+            if (error) {
+                return error;
+            } else {
+                response.render('pages/update', { book: foundBook });
+            }
+        });
     }
 }

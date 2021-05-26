@@ -6,6 +6,7 @@ app.use(morgan('combined'));
 const methodOverride = require('method-override');
 // const bodyParser = require("body-parser");
 app.use(express.urlencoded({ extended: true }));
+require('./config/connection');
 
 
 

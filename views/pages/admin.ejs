@@ -9,12 +9,6 @@
     </form>
 
 
-
-
-
-
-
-
         <div id=table-container>
             <table class="admin">
                 <tr>
@@ -23,14 +17,11 @@
                     <th>DELETE</th>
                 </tr>
              
-
-       <% data.forEach(book => { %>
-              <%- include('../partials/booklisting', {book: book}) -%>
-              <% }); %>
+                <% data.forEach(book => { %>
+                    <%- include('../partials/booklisting', {book: book}) -%>
+                            <% }); %>
                 
               
-         
-
             </table>
         </div>
     </div>
