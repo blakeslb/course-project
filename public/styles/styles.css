@@ -388,6 +388,29 @@ span {
         margin: 30px 150px 0px;
         padding: 5px 0px;
 }
+/* Login and register with google button  */
+
+.oAuthButton {
+    display: block; 
+    text-align: center; 
+    padding: 10px;
+    border: 2px solid blue; 
+    border-radius: 15px; 
+    color:blue;
+    width: 180px; 
+    margin: 0px auto 30px auto;
+
+}
+.oAuthButton:active {
+    color: blue;
+
+}
+.oAuthButton:hover {
+    background-color: var(--yellow)
+}
+
+
+
 
 /* Mobile to tablet screen size */
 @media screen and (min-width: 320px) and (max-width: 768px){

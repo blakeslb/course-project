@@ -9,6 +9,15 @@ const siteController = require('../controllers/site-controller');
 router.route('/')
     .get(siteController.index);
 
+router.route('/auth/google')
+    .get(siteController.google_get)
+
+router.route('/auth/google/admin')
+    .get(siteController.google_redirect_get)
+
+router.route('/logout')
+    .get(siteController.logout)
+
 router.route('/about')
     .get(siteController.about);
 

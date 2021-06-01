@@ -4,6 +4,7 @@ const Comic = require("../models/comic-model");
 
 module.exports = {
     admin: (request, response) => {
+        if (request.isAuthenticated()) {
         Comic.find({}, (error, allComics) => {
             if (error) {
                 return error;
@@ -11,6 +12,10 @@ module.exports = {
                 response.render('pages/admin', { data: allComics });
             }
         });
+    } else {
+        response.redirect('/login')
+
+    }
     },
 
     create: (request, response) => {

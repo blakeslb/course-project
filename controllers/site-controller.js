@@ -2,8 +2,10 @@
 //Bring in data
 const Comic = require("../models/comic-model");
 const User = require("../models/userSchema");
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
+// const bcrypt = require('bcrypt');
+// const saltRounds = 10;
+const passport = require('passport');
+
 
 module.exports = {
     index: (request, response) => {
@@ -55,39 +57,46 @@ module.exports = {
     register: (request, response) => {
         response.render('pages/register')
     },
-    register_post: (request, response) => {
-        bcrypt.hash(request.body.password, saltRounds, (err, hash) => {
-            const newUser = new User({
-                username: request.body.username,
-                password: hash
+    register_post:(request, response) => {
+        User.register({username: request.body.username}, request.body.password, (error, user) => {
+          if (error) {
+            console.log(error);
+            response.redirect('/register');
+          } else {
+            passport.authenticate('local')(request, response, () => {
+              response.redirect('/admin');
             });
-            newUser.save();
-            response.redirect('/login/');
+          }
         });
-    },
+      },
 
     login_post: (request, response) => {
-        const username = request.body.username;
-        const password = request.body.password;
-        console.log(`password entered is: ${password}`);
-        User.findOne({username: username}, (error, foundUser) => {
+        const user = new User({
+          username: request.body.username,
+          password: request.body.password
+        });
+      
+        request.login(user, (error) => {
           if (error) {
-            console.log(`The error at login is: ${error}`);
+            return error;
           } else {
-            if(foundUser) {
-              console.log(`username was matched: ${foundUser.username}`);
-              console.log(`their password is: ${foundUser.password}`);
-              bcrypt.compare(password, foundUser.password, (error, result) => {
-                if (result === true) {
-                  console.log(`user ${foundUser.username} successfully logged in`);
-                  response.redirect('/admin/');
-                } else {
-                    response.redirect('/login/');
-                    console.log('password incorrect')
-                }
-              });
-            };
-          };
-       });
-      }
-  }
+            passport.authenticate('local')(request, response, () => {
+              response.redirect('/');
+            });
+          }
+        });
+      },
+    google_get:
+        passport.authenticate('google', { scope: ['openid', 'profile', 'email'] }),
+
+    google_redirect_get: [
+        passport.authenticate('google', { failureRedirect: '/login' }),
+        function (request, response) {
+            response.redirect('/admin');
+        }],
+
+    logout: (request, response) => {
+        request.logout();
+        response.redirect('/login');
+    }
+}
